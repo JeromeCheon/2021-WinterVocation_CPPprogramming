@@ -12,6 +12,9 @@ public:
     explicit Queue(int cap = 100) : buf(0), size(0), popidx(0), capacity(cap){
         buf = new T[capacity] ;
     }
+    T operator[](int idx){
+        return buf[idx] ;
+    }
     void Push(T data){
         buf[size++] = data ;
     }
